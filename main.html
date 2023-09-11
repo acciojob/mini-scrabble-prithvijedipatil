@@ -1,16 +1,23 @@
-<!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letter Count Tool</title>
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+    <label for="evaluatedText">Enter Text:</label>
+    <input type="text" id="evaluatedText">
+    <h3 id="letterCount">0</h3>
 
+    <script>
+        const evaluatedText = document.getElementById("evaluatedText");
+        const letterCount = document.getElementById("letterCount");
+
+        evaluatedText.addEventListener("input", () => {
+            const text = evaluatedText.value;
+            const count = text.length;
+            letterCount.textContent = count;
+        });
+    </script>
 </body>
-
 </html>
